@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+
+    <!-- Hoja de estilos de la pagina -->
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- Fuente de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icono del navegador de la pagina -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
+
+    <!-- Iconos Google -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"
+    />
+  </head>
+  <body>
+    <div id="navbar_container"></div>
+    <div class="contenedorContacto">
+      <h3 class="tituloContacto">Contacto</h3>
+      <form action="about:blank" method="post" id="formularioContacto"> 
+        <div class="nombreyapellidoContacto">
+          <label for="nombreContacto">Nombre*</label>
+          <input
+            type="text"
+            name="nombre"
+            required
+            autocomplete="name"
+            maxlength="20"
+            minlength="1"
+            id="nombreContacto"
+          />
+
+          <label for="apellidoContacto">Apellido*</label>
+          <input
+            type="text"
+            name="apellido"
+            required
+            maxlength="20"
+            minlength="1"
+            id="apellidoContacto"
+          />
+        </div>
+
+        <div class="emailContacto">
+          <label for="emailContacto">Email*</label>
+          <input
+            type="email"
+            name="email"
+            required
+            autocomplete="email"
+            maxlength="50"
+            minlength="1"
+            id="emailContacto"
+          />
+        </div>
+
+        <div class="mensajeContacto">
+          <label for="mensajeContacto">Mensaje</label>
+          <textarea name="mensaje" id="mensajeContacto" res></textarea>
+        </div>
+
+        <div class="botonContacto">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

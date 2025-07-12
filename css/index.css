@@ -1,0 +1,557 @@
+:root {
+  /* Paleta de colores importantes para la pagina*/
+  --colorPrimario: rgb(19, 53, 176);
+  --colorPrimarioTransparente: rgba(19, 53, 176, 0.822);
+  --colorSecundario: rgb(227, 227, 227);
+  --colorTerciario: rgb(202, 0, 0);
+  --colorHoverTransparente: rgba(204, 204, 204, 0.327);
+  /* Colores de texto */
+  --colorTexto: rgb(9, 9, 9);
+  --colorTextoOpcional: rgb(245, 245, 245);
+  --colorTextoOpcionalTransparente: rgba(245, 245, 245, 0.381);
+
+  /* Tipografias de la pagina*/
+  --fuentePrincipal: "Lato", sans-serif;
+
+  /* Medidas de texto */
+  --PesoFuenteNormal: 400;
+  --PesoFuenteNegrita: 700;
+  --MedidaTextoPorDefecto: 1rem;
+
+  /* Bordes para tarjetas */
+}
+
+/* Titulos y textos con sus estilos por defecto */
+
+h1,
+h3,
+h4, a {
+  color: var(--colorPrimario);
+}
+
+h2{
+  color: var(--colorTextoOpcional);
+}
+
+a,
+li,
+ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+}
+
+/* Clases con texto */
+
+.textollamativo {
+  color: var(--colorTerciario);
+}
+
+/* Contenedores */
+
+body {
+  margin: 0;
+  font-family: var(--fuentePrincipal);
+  font-weight: var(--PesoFuenteNormal);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Medida Celulares */
+
+.titulo_principal {
+  font-size: 7.8vw;
+  margin: 0 0 3vw 0;
+}
+
+.contenedor_pag_principal {
+  margin: 0 5vw;
+}
+
+.botonMasInfo {
+  background-color: var(--colorTerciario);
+  color: var(--colorTextoOpcional);
+}
+
+.contenedor_resumen_empresa {
+  background-color: var(--colorSecundario);
+  padding: 7vw 5vw;
+}
+
+.contenedor_pag_principal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.texto_contenedor_principal,
+.masinfo_contenedor_principal,
+.icono_mas {
+  font-size: 3vw;
+}
+
+.texto_contenedor_principal {
+  display: flex;
+  flex-direction: row;
+}
+
+.masinfo_contenedor_principal {
+  background-color: var(--colorTerciario);
+  color: var(--colorTextoOpcional);
+}
+
+.masinfo_contenedor_principal,
+.icono_mas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono_mas {
+  background-color: var(--colorPrimario);
+  height: 3.7vw;
+}
+
+.masinfo_contenedor_principal {
+  cursor: pointer;
+}
+
+.masinfo_contenedor_principal div {
+  padding: 2vw 2.5vw;
+}
+
+.separador_contenedor_texto {
+  width: 55vw;
+  height: 0.3vw;
+  margin: 1vw 3vw 0 0;
+  background-color: var(--colorTexto);
+}
+
+.contenedor_de_texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7vw;
+}
+
+.imagen_presentacion {
+  width: 100%;
+}
+
+.navbar, .navbar ul li a {
+  background-color: var(--colorTextoOpcional);
+  transition: all .4s linear;
+}
+
+.navbar ul li a:hover {
+  color: var(--colorTerciario);
+  background-color: var(--colorPrimario);
+}
+
+/* Estilo de navbar para tablet y celular */
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  .navbar {
+    gap: 1em;
+    position: fixed;
+    left: 0;
+    width: 5.4rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 2vw;
+    height: 100%;
+    max-height: 100vh;
+    padding-top: 0.5rem;
+    transition: opacity 2s linear, all 2s, max-height 0.9s ease;
+  }
+
+  .icono_menu {
+    width: 100%;
+    padding: 0.8rem 0;
+  }
+
+  /* Clase a ubicar con js para deshabilitar menu en celulares y tablets */
+  .offsidebar_menu {
+    max-height: 8vh;
+    padding-top: 0;
+    border-radius: 7px;
+    background-color: var(--colorTextoOpcionalTransparente);
+  }
+
+  /* Clase que deshabilita otras opciones del menu */
+  .off_menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .icono_menu:hover {
+    background-color: var(--colorHoverTransparente);
+  }
+
+  .navbar ul,
+  .navbar ul li a {
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    padding: 1rem 0;
+  }
+
+  .navbar ul li a {
+    display: block;
+  }
+
+  .logo_navbar {
+    width: 3rem;
+    border-radius: 50%;
+  }
+}
+
+/* Medidas tables y laptops */
+
+@media screen and (min-width: 520px) {
+  /* Titulos o texto */
+
+  .titulo_principal {
+    font-size: 4.8vw;
+    margin: 0 0 2vw 0;
+  }
+
+  /* Contenedores */
+
+  .contenedor_pag_principal {
+    margin: 0;
+    position: relative;
+    bottom: 16vw;
+    left: 7.8vw;
+    width: 90vw;
+  }
+
+  .texto_contenedor_principal,
+  .masinfo_contenedor_principal,
+  .icono_mas {
+    font-size: 2vw;
+  }
+
+  .masinfo_contenedor_principal div {
+    padding: 1.7vw 1.9vw;
+  }
+
+  .separador_contenedor_texto {
+    width: 7vw;
+    height: 0.3vw;
+    margin: 1vw 3vw 0 0;
+  }
+
+  .contenedor_de_texto {
+    width: 40vw;
+    gap: 1.1vw;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  /* Titulos o texto */
+
+  .titulo_principal {
+    font-size: 4.8vw;
+    margin: 0 0 2vw 0;
+  }
+
+  /* Contenedores */
+
+  .contenedor_pag_principal {
+    margin: 0;
+    position: relative;
+    bottom: 16vw;
+    left: 6.8vw;
+    width: 87vw;
+  }
+
+  .contenedor_resumen_empresa {
+    padding: 6vw 4vw;
+  }
+
+  .texto_contenedor_principal,
+  .masinfo_contenedor_principal,
+  .icono_mas {
+    font-size: 1.3vw;
+  }
+
+  .masinfo_contenedor_principal div {
+    padding: 0.4vw 1.4vw;
+  }
+
+  .separador_contenedor_texto {
+    width: 5vw;
+    height: 0.3vw;
+    margin: 0.9vw 3vw 0 0;
+  }
+
+  .contenedor_de_texto {
+    width: 34vw;
+    gap: 1.1vw;
+  }
+
+  .navbar {
+    gap: 2em;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .navbar,
+  .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.1rem;
+  }
+
+  .navbar ul li a {
+    padding: 1rem;
+  }
+
+  .logo_navbar {
+    width: 3rem;
+    border-radius: 50%;
+  }
+
+  #menu_icon {
+    display: none;
+  }
+}
+
+/* Pagina nuestros servicios y sectores */
+
+h2 {
+  font-size: 7.8vw;
+}
+
+h3 {
+  font-size: 4.8vw;
+}
+
+h2,
+h3 {
+  margin: 0 0 3vw 0;
+}
+
+.contenedorPrincipalPagSecundarias {
+  background-color: var(--colorPrimario);
+  color: var(--colorTextoOpcional);
+  padding: 9vw 7vw;
+  font-size: 3vw;
+}
+
+.contenedorTarjetasWeb {
+  gap: 3vw;
+  display: grid;
+  justify-content: center;
+  margin-top: 3vw;
+}
+
+.tarjetaWeb {
+  background-color: var(--colorSecundario);
+  padding: 4.7vw;
+  font-size: 2.6vw;
+  width: 47vw;
+  max-height: auto;
+  box-sizing: border-box;
+  box-shadow: 10px 9px 0 0 var(--colorHoverTransparente);
+}
+
+.contenidoTarjeta {
+  max-height: 47vw;
+}
+
+.overflowContenidoTarjeta {
+  overflow: hidden;
+}
+
+.leerMas {
+  padding-top: 0.7vw;
+  cursor: pointer;
+  transition: all 1s linear;
+}
+
+.leerMas:hover {
+  color: var(--colorPrimario);
+}
+
+.contenedorPrincipalPagSecundarias p {
+  padding-bottom: 1vw;
+}
+
+.tecnologiasTarjetaSectores {
+  padding: 0 1vw 1vw 1vw;
+  gap: 0.5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.tecnologiasTarjeta {
+  color: var(--colorTextoOpcional);
+  background-color: var(--colorPrimarioTransparente);
+}
+
+.tecnologiaTarjetaTitulo {
+  color: var(--colorPrimario);
+  font-weight: 900;
+}
+
+@media screen and (min-width: 520px) {
+  h2 {
+    font-size: 5.8vw;
+    margin: 0 0 3vw 0;
+  }
+
+  h3 {
+    font-size: 4.8vw;
+  }
+
+  .contenedorPrincipalPagSecundarias {
+    padding: 9vw 7vw;
+    font-size: 2.6vw;
+  }
+
+  .contenedorTarjetasWeb {
+    margin: 0;
+    gap: 2.4vw;
+    grid-template-columns: auto auto;
+    position: relative;
+    bottom: 4.8vw;
+  }
+
+  .tarjetaWeb {
+    padding: 4vw;
+    font-size: 2.2vw;
+    width: 42vw;
+    box-sizing: border-box;
+  }
+
+  .contenidoTarjeta {
+    max-height: 37vw;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  h2 {
+    font-size: 4.8vw;
+    margin: 0 0 2vw 0;
+  }
+
+  h3 {
+    font-size: 3.7vw;
+  }
+
+  .contenedorPrincipalPagSecundarias {
+    padding: 3vw 7vw;
+    font-size: 1.8vw;
+  }
+
+  .tituloExtend {
+    word-break: break-all;
+  }
+
+  .contenedorTarjetasWeb {
+    margin: 0;
+    gap: 2.5vw;
+    grid-template-columns: auto auto auto;
+    position: relative;
+    bottom: 1.3vw;
+  }
+
+  .tarjetaWeb {
+    padding: 3vw;
+    font-size: 1.5vw;
+    width: 27vw;
+    box-sizing: border-box;
+  }
+
+  .contenidoTarjeta {
+    max-height: 28vw;
+  }
+}
+
+/* Pagina Contacto */
+
+textarea {
+  resize: none;
+}
+
+.contenedorContacto {
+  background-color: var(--colorPrimario);
+  color: var(--colorTextoOpcional);
+  height: 100vh;
+}
+
+.contenedorContacto,
+.contenedorContacto form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+.contenedorContacto form {
+  font-size: 2vw;
+}
+
+.tituloContacto {
+  color: var(--colorTextoOpcional);
+}
+
+.emailContacto,
+.mensajeContacto,
+.botonContacto {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea, button{
+  background-color: var(--colorPrimarioTransparente);
+  border: none;
+  color: var(--colorTextoOpcional);
+}
+
+.emailContacto input, textarea{
+  border-bottom: 0.5px solid var(--colorTextoOpcional);
+}
+
+
+
+@media screen and (min-width: 0px) and (max-width: 520px){
+  .nombreyapellidoContacto, .emailContacto, .botonContacto{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 520px) {
+
+  .contenedorContacto form {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .contenedorContacto,
+  .contenedorContacto form {
+    gap: 1.8vw;
+  }
+
+  .contenedorContacto form {
+    font-size: 1.2vw;
+  }
+}
